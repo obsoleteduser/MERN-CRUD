@@ -1,7 +1,7 @@
 import express from 'express'
 import * as dotenv from 'dotenv'
-import connectToDB from './config/connectToDB.js';
-import router from './routes/noteRouter.js';
+import connectToDB from './config/connectToDb.js';
+import router from './routes/postRouter.js';
 
 if(process.env.NODE_ENV !="production"){
     dotenv.config();

@@ -1,4 +1,4 @@
-import Note from "../models/note.js"
+import Note from "../models/post.js"
 
 class NoteController {
 
