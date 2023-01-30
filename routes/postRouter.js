@@ -1,17 +1,18 @@
 import express from 'express'
-import noteController from '../controllers/noteController.js'
+import PostController from '../controllers/postController.js'
+
 
 const router = express.Router()
 
-router.get('/notes', noteController.getNotes)
+router.get('/notes', PostController.getNotes)
 
-router.get('/notes/:id', noteController.getNoteById)
+router.get('/notes/:id', PostController.getNoteById)
 
-router.post('/notes', noteController.addNote)
+router.post('/notes', PostController.addNote)
 
-router.put('/notes/:id', noteController.editNote)
+router.put('/notes/:id', PostController.editNote)
 
-router.delete('/notes/:id', noteController.deleteNote)
+router.delete('/notes/:id', PostController.deleteNote)
 
 
 export default router

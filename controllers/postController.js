@@ -1,6 +1,6 @@
 import Note from "../models/post.js"
 
-class NoteController {
+class PostController {
 
     getNotes = async (req, res) => {
         const notes = await Note.find()
@@ -45,4 +45,4 @@ class NoteController {
 }
 
 
-export default new NoteController()
+export default new PostController()
