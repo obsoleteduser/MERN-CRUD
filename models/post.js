@@ -5,6 +5,6 @@ const noteSchema = new mongoose.Schema({
     body: String
 })
 
-const Note = mongoose.model('Note', noteSchema)
+const Post = mongoose.model('Post', noteSchema)
 
-export default Note
+export default Post

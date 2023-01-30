@@ -1,25 +1,25 @@
-import Note from "../models/post.js"
+import Post from "../models/post.js"
 
 class PostController {
 
     getNotes = async (req, res) => {
-        const notes = await Note.find()
-        res.json({ notes })
+        const posts = await Post.find()
+        res.json({ posts })
     }
 
     getNoteById = async (req, res) => {
         const { id } = req.params
-        const note = await Note.findById(id)
-        res.json({ note })
+        const post = await Note.findById(id)
+        res.json({ post })
     }
 
     addNote = async (req, res) => {
         const { title, body } = req.body
-        const note = await Note.create({
+        const post = await Post.create({
             title,
             body
         })
-        res.json({ note })
+        res.json({ post })
     }
 
 
@@ -27,9 +27,9 @@ class PostController {
 
         const { id } = req.params
         const { title, body } = req.body
-        await Note.findByIdAndUpdate(id, { title, body })
-        const note = await Note.findById(id)
-        res.json({ note })
+        await Post.findByIdAndUpdate(id, { title, body })
+        const post = await Post.findById(id)
+        res.json({ post })
 
 
     }
@@ -37,8 +37,8 @@ class PostController {
 
     deleteNote = async (req, res) => {
         const { id } = req.params
-        const note = await Note.deleteOne({ id })
-        res.json({ Success: true, note })
+        const post = await Post.deleteOne({ id })
+        res.json({ Success: true, post })
 
     }
 
