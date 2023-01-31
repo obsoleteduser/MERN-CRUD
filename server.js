@@ -1,6 +1,6 @@
 import express from 'express'
 import * as dotenv from 'dotenv'
-import connectToDB from './config/connectToDb.js';
+import connectToDb from './config/connectToDb.js';
 import router from './routes/postRouter.js';
 import cors from 'cors'
 
@@ -14,7 +14,7 @@ app.use(cors())
 app.use(express.json())
 app.use('/api', router)
 
-connectToDB()
+connectToDb()
 
 app.get('/', (req, res)=>{
         res.send("This is CRUD API")    

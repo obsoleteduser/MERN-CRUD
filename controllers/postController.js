@@ -9,7 +9,7 @@ class PostController {
 
     getNoteById = async (req, res) => {
         const { id } = req.params
-        const post = await Note.findById(id)
+        const post = await Post.findById(id)
         res.json({ post })
     }
 
